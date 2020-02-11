@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            width:200px;
+            height:250px;
+            border:1px solid black;
+        }
+    </style>
+    <title>Cursor en/fuera</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).ready(function() {
+            $('img').hover(function(){
+                src=$(this).attr("src")
+                $(this).attr("src",$(this).attr("auxiliar-src")) 
+                $(this).attr("auxiliar-src",src) 
+           })
+        })
+        })
+    </script>
+</head>
+<body>
+    <div id="container">
+        <img src="polera1a.jfif" auxiliar-src="polera1b.jfif">
+        <img src="polera2a.jfif" auxiliar-src="polera2b.jfif">
+        <img src="polera3a.jfif" auxiliar-src="polera3b.jfif">
+        <img src="polera4a.jfif" auxiliar-src="polera4b.jfif">
+    </div>
+</body>
+</html>
